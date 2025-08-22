@@ -73,7 +73,7 @@ const comparisonData = [
   }
 ];
 
-function renderCell(data: any, isBoabet = false) {
+function renderCell(data: string | { value: string; type: string }, isBoabet = false) {
   if (typeof data === 'string') {
     return (
       <span className={isBoabet ? 'font-semibold text-gray-900' : 'text-gray-700'}>

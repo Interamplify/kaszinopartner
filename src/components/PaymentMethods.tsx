@@ -58,8 +58,56 @@ export default function PaymentMethods() {
           </p>
         </div>
 
-        {/* Payment Methods Table */}
-        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm mb-8">
+        {/* Mobile View */}
+        <div className="block md:hidden space-y-4 mb-8">
+          {paymentMethods.map((method, index) => (
+            <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+              <div className="bg-gray-900 text-white px-4 py-3">
+                <div className="flex items-center">
+                  <span className="text-xl mr-3">{method.icon}</span>
+                  <h3 className="font-semibold text-base">{method.name}</h3>
+                </div>
+              </div>
+              <div className="p-4 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm font-medium text-gray-900 mb-1">Befizetési Idő</div>
+                    <div className="text-sm text-gray-700">{method.depositTime}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-gray-900 mb-1">Kifizetési Idő</div>
+                    <div className="text-sm text-gray-700">{method.withdrawTime}</div>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-gray-900 mb-2">Előnyök</div>
+                  <ul className="space-y-1">
+                    {method.pros.map((pro, proIndex) => (
+                      <li key={proIndex} className="flex items-center text-sm text-green-700">
+                        <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-gray-900 mb-2">Hátrányok</div>
+                  <ul className="space-y-1">
+                    {method.cons.map((con, conIndex) => (
+                      <li key={conIndex} className="flex items-center text-sm text-red-700">
+                        <div className="w-2 h-2 bg-red-400 rounded-full mr-2 flex-shrink-0"></div>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden md:block bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm mb-8">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -114,7 +162,7 @@ export default function PaymentMethods() {
         </div>
 
         {/* Crypto Guide */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">Bitcoin Befizetés Lépésről Lépésre</h3>
             <div className="space-y-3 text-sm">

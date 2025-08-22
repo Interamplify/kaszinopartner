@@ -24,7 +24,7 @@ export default function WinnerHighlight() {
           
           {/* Winner Content */}
           <div className="p-8">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               {/* Casino Info */}
               <div className="md:col-span-2">
@@ -42,7 +42,7 @@ export default function WinnerHighlight() {
                 </div>
                 
                 {/* Key Features */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center text-base text-gray-600">
                     <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
                     24-48h kifizetés

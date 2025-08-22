@@ -80,7 +80,7 @@ export default function PopularGames() {
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {game.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
@@ -102,7 +102,7 @@ export default function PopularGames() {
             Szeretnéd a valódi kaszinók hangulatát otthonod kényelméből? Az élő osztós játékok ezt teszik lehetővé.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {liveGames.map((game, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{game.name}</h4>
@@ -121,7 +121,7 @@ export default function PopularGames() {
         <div className="bg-gray-900 text-white rounded-lg p-8">
           <h3 className="text-2xl font-bold mb-6">Profi Tippek: Hogyan Növeld Nyerési Esélyeidet?</h3>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-3 text-orange-300">Nyerőgépek</h4>
               <ul className="space-y-2 text-sm text-gray-200">
@@ -145,7 +145,7 @@ export default function PopularGames() {
               <ul className="space-y-2 text-sm text-gray-200">
                 <li>• Válaszd az európai változatot</li>
                 <li>• Koncentrálj a külső tétekre</li>
-                <li>• Ne dőlj be a "biztos" rendszereknek</li>
+                <li>• Ne dőlj be a &quot;biztos&quot; rendszereknek</li>
               </ul>
             </div>
           </div>

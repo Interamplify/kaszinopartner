@@ -14,7 +14,7 @@ export default function BonusGuide() {
         </div>
 
         {/* Bonus Types */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
           <div className="bg-gray-50 rounded-lg p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Üdvözlő Bónuszok</h3>
             <p className="text-base text-gray-600 mb-4">
@@ -54,7 +54,7 @@ export default function BonusGuide() {
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg p-8">
           <h3 className="text-2xl font-bold mb-6">Cashback vs. VIP Programok</h3>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-3 text-orange-300">Cashback</h4>
               <p className="text-gray-200 mb-4">
